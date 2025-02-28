@@ -99,7 +99,7 @@ def demo_create_simple_mindmap():
 
     add_modify_hyperlink("https://www.freeplane.com")
 
-    save_map_as('demo1.mm')
+    save_map_as('demo2.mm')
     
     logging.info("Simple mind map created successfully")
     return True
