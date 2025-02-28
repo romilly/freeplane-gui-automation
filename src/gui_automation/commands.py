@@ -698,108 +698,88 @@ def documentation():
     logging.info("Open documentation")
     pyautogui.press('f1')
 
-#----------------------------------------
-# Main example function
-#----------------------------------------
-
-def demo_create_simple_mindmap():
-    """
-    Demo function that creates a simple mind map
-    """
-    # Find and focus Freeplane window
-    if not find_freeplane_window():
-        logging.error("Couldn't find Freeplane window. Exiting.")
-        return False
-    
-    # Create a new mind map and ensure it has focus
-    if not new_map():
-        logging.error("Failed to create new map or switch to it. Exiting.")
-        return False
-    
-    # A short delay to ensure UI is ready
-    time.sleep(0.5)
-    
-    # Edit the central node
-    edit_node_core_inline()
-    time.sleep(0.5)
-    
-    # Clear existing text ("New Mindmap") by selecting all and deleting
-    pyautogui.hotkey('ctrl', 'a')
-    time.sleep(0.2)
-    pyautogui.press('delete')
-    time.sleep(0.2)
-    
-    # Type new text
-    type_text("My Project Plan")
-    pyautogui.press('enter')
-    time.sleep(0.5)
-    
-    # Create first child node
-    new_child_node()
-    time.sleep(0.5)
-    type_text("Tasks")
-    pyautogui.press('enter')
-    
-    # Create child under Tasks
-    new_child_node()
-    time.sleep(0.5)
-    type_text("Research")
-    pyautogui.press('enter')
-    
-    # Create sibling
-    new_sibling_node()
-    time.sleep(0.5)
-    type_text("Development")
-    pyautogui.press('enter')
-    
-    # Create sibling
-    new_sibling_node()
-    time.sleep(0.5)
-    type_text("Testing")
-    pyautogui.press('enter')
-    
-    # Go back to root
-    goto_root()
-    time.sleep(0.5)
-    
-    # Create another main branch
-    new_child_node()
-    time.sleep(0.5)
-    type_text("Timeline")
-    pyautogui.press('enter')
-    
-    # Format it bold
-    format_bold()
-    
-    # Create another main branch
-    goto_root()
-    time.sleep(0.5)
-    new_child_node()
-    time.sleep(0.5)
-    type_text("Resources")
-    pyautogui.press('enter')
-
-    add_modify_hyperlink("https://www.freeplane.com")
-
-    save_map_as('demo.mm')
-    
-    logging.info("Simple mind map created successfully")
-    return True
-
-if __name__ == "__main__":
-    # Check if xdotool is installed
-    try:
-        subprocess.check_output(["which", "xdotool"])
-    except subprocess.CalledProcessError:
-        logging.error("Error: xdotool is not installed. Install it with: sudo apt install xdotool")
-        exit(1)
-    
-    # Check if pyautogui is installed
-    try:
-        import pyautogui
-    except ImportError:
-        logging.error("PyAutoGUI is not installed. Please install it with: pip install pyautogui")
-        exit(1)
-    
-    # Run the demo function
-    demo_create_simple_mindmap()
+# Define __all__ for better import control
+__all__ = [
+    'find_freeplane_window',
+    'type_text',
+    'new_map',
+    'save_map',
+    '_save_map_as',
+    'save_map_as',
+    'open_map',
+    'print_map',
+    'close_current_map',
+    'quit_freeplane',
+    'add_remove_cloud',
+    'connect_nodes',
+    'remove_node',
+    'undo',
+    'redo',
+    'cut',
+    'copy',
+    'paste',
+    'paste_as',
+    'paste_clone',
+    'reset_node_position',
+    'new_child_node',
+    'new_sibling_node',
+    'new_previous_sibling_node',
+    'new_parent_node',
+    'new_summary_node',
+    'add_hyperlink',
+    '_add_modify_hyperlink',
+    'add_modify_hyperlink',
+    'add_local_hyperlink',
+    'follow_link',
+    'edit_node_core_inline',
+    'edit_node_core_dialog',
+    'split_node',
+    'join_nodes',
+    'format_bold',
+    'format_italic',
+    'larger_font',
+    'smaller_font',
+    'node_color',
+    'node_background_color',
+    'use_plain_text',
+    'edit_node_details_inline',
+    'edit_node_details_dialog',
+    'edit_attribute_inline',
+    'display_note_panel',
+    'note_edit_switch',
+    'copy_format',
+    'paste_format',
+    'redefine_style',
+    'copy_map_style',
+    'edit_styles',
+    'full_screen_mode',
+    'previous_map',
+    'next_map',
+    'select_all_visible_nodes',
+    'select_visible_branch',
+    'goto_root',
+    'goto_previous_node',
+    'goto_next_node',
+    'goto_previous_node_fold',
+    'goto_next_node_fold',
+    'go_backward',
+    'go_forward',
+    'unfold',
+    'show_next_child',
+    'unfold_children',
+    'unfold_one_level',
+    'fold_one_level',
+    'unfold_all',
+    'fold_all',
+    'run_presentation',
+    'stop_presentation',
+    'previous_slide',
+    'manage_time',
+    'clear_dependencies',
+    'trace_precedents',
+    'trace_dependents',
+    'preferences',
+    'mind_map_editor',
+    'file_explorer',
+    'documentation'
+]

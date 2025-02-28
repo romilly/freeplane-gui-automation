@@ -91,7 +91,7 @@ Note: Remember to activate the virtual environment (`source venv/bin/activate`) 
 
 2. Run the demo script:
    ```bash
-   python src/gui_automation/freeplane-commands.py
+   python src/gui_automation/demo.py
    ```
 
 The demo will create a simple mind map with:
@@ -100,6 +100,13 @@ The demo will create a simple mind map with:
 - Sub-tasks under the Tasks branch
 - A hyperlink in the Resources branch
 - The final mind map will be saved as 'demo.mm'
+
+You can also import and use the demo function in your own scripts:
+```python
+from gui_automation.demo import demo_create_simple_mindmap
+
+demo_create_simple_mindmap()
+```
 
 ## Contributing
 
