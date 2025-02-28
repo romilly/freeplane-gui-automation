@@ -105,6 +105,29 @@ The demo will create a simple mind map with:
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+## Development Notes
+
+### Git LFS
+
+This project uses Git Large File Storage (LFS) for handling large media files. All `.mp4` files are tracked using Git LFS.
+
+If you plan to work with video files in this project:
+
+1. Install Git LFS if you haven't already:
+   ```bash
+   # For Ubuntu/Debian
+   sudo apt-get install git-lfs
+   
+   # For other systems, see https://git-lfs.com
+   ```
+
+2. Enable Git LFS in your local repository:
+   ```bash
+   git lfs install
+   ```
+
+After this setup, any `.mp4` files you add will automatically be handled by Git LFS.
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
