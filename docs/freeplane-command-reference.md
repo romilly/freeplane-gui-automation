@@ -8,7 +8,7 @@ This document provides a reference for Freeplane keyboard shortcuts and their co
 |---------|-------------------|-----------------|
 | New map | Ctrl+N | `new_map()` |
 | Save map | Ctrl+S | `save_map()` |
-| Save map as... | Ctrl+Shift+S | `save_map_as()` |
+| Save map as... | Ctrl+Shift+S | `_save_map_as()` |
 | Open saved map... | Ctrl+O | `open_map()` |
 | Print map... | Ctrl+P | `print_map()` |
 | Close current map | Ctrl+W | `close_current_map()` |
@@ -45,7 +45,7 @@ This document provides a reference for Freeplane keyboard shortcuts and their co
 | Command | Keyboard Shortcut | Python Function |
 |---------|-------------------|-----------------|
 | Add hyperlink (choose)... | Ctrl+Shift+K | `add_hyperlink()` |
-| Add or modify hyperlink (type)... | Ctrl+K | `add_modify_hyperlink()` |
+| Add or modify hyperlink (type)... | Ctrl+K | `_add_modify_hyperlink()` |
 | Add local hyperlink | Alt+Shift+L | `add_local_hyperlink()` |
 | Follow link | Ctrl+Enter | `follow_link()` |
 
