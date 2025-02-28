@@ -160,10 +160,75 @@ def save_map():
     logging.info("Saving map")
     pyautogui.hotkey('ctrl', 's')
     
-def save_map_as():
+def _save_map_as():
     """Save the map as (Ctrl+Shift+S)"""
     logging.info("Save map as")
     pyautogui.hotkey('ctrl', 'shift', 's')
+
+
+def save_map_as(filepath):
+    """
+    Save the map as with the specified filepath.
+    Handles the full dialog interaction.
+
+    Args:
+        filepath (str): The full path or filename to save the map as
+    """
+    logging.info(f"Saving map as '{filepath}'")
+
+    # First trigger the Save As dialog
+    _save_map_as()
+    time.sleep(1.0)  # Wait for dialog to appear
+
+    # Extract just the filename from the path if a full path is provided
+    if '/' in filepath:
+        filename = filepath.split('/')[-1]
+    else:
+        filename = filepath
+
+    # Make sure filename has .mm extension if not already present
+    if not filename.lower().endswith('.mm'):
+        filename += '.mm'
+
+    # Clear any existing filename in the field and enter the new one
+    for _ in range(50):  # Safe number of backspaces to clear field
+        pyautogui.press('backspace')
+    time.sleep(0.2)
+
+    # Type the filename
+    type_text(filename, human_like=False)  # Faster typing for filenames
+    time.sleep(0.5)
+
+    # If a directory was specified, we'd need to navigate to it
+    # This would require additional logic to handle directory navigation
+    # For now, we'll just use the default directory
+
+    # Press the Save button
+    pyautogui.press('tab')  # Ensure focus is on the Save button
+    time.sleep(0.3)
+    pyautogui.press('enter')  # Click the Save button
+
+    # Wait for the save operation to complete
+    time.sleep(1.0)
+
+    # Check for overwrite confirmation dialog and handle it
+    try:
+        # Try to detect if an overwrite confirmation dialog appeared
+        # This is a simple approach; might need adjusting based on the actual dialog
+        window_text = subprocess.check_output(
+            ["xdotool", "getactivewindow", "getwindowname"],
+            text=True
+        ).strip()
+
+        if "already exists" in window_text.lower() or "confirm" in window_text.lower():
+            logging.info("Overwrite confirmation dialog detected")
+            pyautogui.press('enter')  # Confirm overwrite
+            time.sleep(0.5)
+    except Exception as e:
+        logging.debug(f"No overwrite dialog detected: {e}")
+
+    logging.info(f"Map saved as '{filename}'")
+    return True
     
 def open_map():
     """Open a saved map (Ctrl+O)"""
@@ -676,6 +741,8 @@ def demo_create_simple_mindmap():
     time.sleep(0.5)
     type_text("Resources")
     pyautogui.press('enter')
+
+    save_map_as('demo.mm')
     
     logging.info("Simple mind map created successfully")
     return True
