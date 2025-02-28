@@ -1,6 +1,6 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="My Project Plan" FOLDED="false" ID="ID_1257259497" CREATED="1740735546826" MODIFIED="1740735553039" STYLE="oval">
+<node TEXT="My Project Plan" FOLDED="false" ID="ID_1502826126" CREATED="1740736302917" MODIFIED="1740736308980" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
@@ -64,17 +64,17 @@
 </map_styles>
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="3" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="Tasks" POSITION="right" ID="ID_1057896792" CREATED="1740735553636" MODIFIED="1740735555440">
+<node TEXT="Tasks" POSITION="right" ID="ID_54417351" CREATED="1740736309575" MODIFIED="1740736311247">
 <edge COLOR="#ff0000"/>
-<node TEXT="Research" ID="ID_1634061260" CREATED="1740735555534" MODIFIED="1740735558078"/>
-<node TEXT="Development" ID="ID_339510563" CREATED="1740735558170" MODIFIED="1740735561127"/>
-<node TEXT="Testing" ID="ID_820917807" CREATED="1740735561219" MODIFIED="1740735563478"/>
+<node TEXT="Research" ID="ID_1029059959" CREATED="1740736311339" MODIFIED="1740736313712"/>
+<node TEXT="Development" ID="ID_1796868343" CREATED="1740736313806" MODIFIED="1740736317118"/>
+<node TEXT="Testing" ID="ID_82864652" CREATED="1740736317210" MODIFIED="1740736319269"/>
 </node>
-<node TEXT="Timeline" POSITION="left" ID="ID_1372546589" CREATED="1740735564177" MODIFIED="1740735566530">
+<node TEXT="Timeline" POSITION="left" ID="ID_1787093780" CREATED="1740736319967" MODIFIED="1740736322546">
 <edge COLOR="#0000ff"/>
 <font BOLD="true"/>
 </node>
-<node TEXT="Resources" POSITION="right" ID="ID_859777243" CREATED="1740735567234" MODIFIED="1740735570137">
+<node TEXT="Resources" POSITION="right" ID="ID_13764352" CREATED="1740736323252" MODIFIED="1740736328310" LINK="https://www.freeplane.com">
 <edge COLOR="#00ff00"/>
 </node>
 </node>

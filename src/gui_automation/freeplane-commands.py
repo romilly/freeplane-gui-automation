@@ -346,11 +346,48 @@ def add_hyperlink():
     """Add hyperlink (Ctrl+Shift+K)"""
     logging.info("Add hyperlink")
     pyautogui.hotkey('ctrl', 'shift', 'k')
-    
-def add_modify_hyperlink():
-    """Add or modify hyperlink with type (Ctrl+K)"""
-    logging.info("Add or modify hyperlink")
+
+
+def _add_modify_hyperlink():
+    """Add or modify hyperlink with type (Ctrl+K) - Internal function"""
+    logging.info("Opening add or modify hyperlink dialog")
     pyautogui.hotkey('ctrl', 'k')
+
+
+def add_modify_hyperlink(url):
+    """
+    Add or modify a hyperlink with the specified URL.
+    Handles the full dialog interaction.
+
+    Args:
+        url (str): The URL for the hyperlink
+    """
+    logging.info(f"Adding hyperlink with URL: '{url}'")
+
+    # First trigger the hyperlink dialog
+    _add_modify_hyperlink()
+    time.sleep(0.8)  # Wait for dialog to appear
+
+    # Clear any existing URL in the field
+    pyautogui.hotkey('ctrl', 'a')  # Select all text
+    time.sleep(0.2)
+    pyautogui.press('delete')  # Delete selected text
+    time.sleep(0.2)
+
+    # Type the URL
+    type_text(url, human_like=False)  # Faster typing for URLs
+    time.sleep(0.3)
+
+    # Press the OK button
+    pyautogui.press('tab')  # Ensure focus is on the OK button
+    time.sleep(0.2)
+    pyautogui.press('enter')  # Click the OK button
+
+    # Wait for the operation to complete
+    time.sleep(0.5)
+
+    logging.info(f"Hyperlink '{url}' added")
+    return True
     
 def add_local_hyperlink():
     """Add local hyperlink (Alt+Shift+L)"""
@@ -741,6 +778,8 @@ def demo_create_simple_mindmap():
     time.sleep(0.5)
     type_text("Resources")
     pyautogui.press('enter')
+
+    add_modify_hyperlink("https://www.freeplane.com")
 
     save_map_as('demo.mm')
     
