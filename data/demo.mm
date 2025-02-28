@@ -1,6 +1,6 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="My Project Plan" FOLDED="false" ID="ID_1502826126" CREATED="1740736302917" MODIFIED="1740736308980" STYLE="oval">
+<node TEXT="My Project Plan" FOLDED="false" ID="ID_668038783" CREATED="1740742674003" MODIFIED="1740742680231" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
@@ -64,17 +64,17 @@
 </map_styles>
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="3" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="Tasks" POSITION="right" ID="ID_54417351" CREATED="1740736309575" MODIFIED="1740736311247">
+<node TEXT="Tasks" POSITION="right" ID="ID_1085685906" CREATED="1740742680829" MODIFIED="1740742682671">
 <edge COLOR="#ff0000"/>
-<node TEXT="Research" ID="ID_1029059959" CREATED="1740736311339" MODIFIED="1740736313712"/>
-<node TEXT="Development" ID="ID_1796868343" CREATED="1740736313806" MODIFIED="1740736317118"/>
-<node TEXT="Testing" ID="ID_82864652" CREATED="1740736317210" MODIFIED="1740736319269"/>
+<node TEXT="Research" ID="ID_584629659" CREATED="1740742682769" MODIFIED="1740742685197"/>
+<node TEXT="Development" ID="ID_680386815" CREATED="1740742685290" MODIFIED="1740742688438"/>
+<node TEXT="Testing" ID="ID_612644274" CREATED="1740742688531" MODIFIED="1740742690790"/>
 </node>
-<node TEXT="Timeline" POSITION="left" ID="ID_1787093780" CREATED="1740736319967" MODIFIED="1740736322546">
+<node TEXT="Timeline" POSITION="left" ID="ID_1510423386" CREATED="1740742691484" MODIFIED="1740742694221">
 <edge COLOR="#0000ff"/>
 <font BOLD="true"/>
 </node>
-<node TEXT="Resources" POSITION="right" ID="ID_13764352" CREATED="1740736323252" MODIFIED="1740736328310" LINK="https://www.freeplane.com">
+<node TEXT="Resources" POSITION="right" ID="ID_258394851" CREATED="1740742694927" MODIFIED="1740742700087" LINK="https://www.freeplane.com">
 <edge COLOR="#00ff00"/>
 </node>
 </node>
