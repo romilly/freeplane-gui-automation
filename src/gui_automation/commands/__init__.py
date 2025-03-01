@@ -16,7 +16,7 @@ from .navigation_commands import *
 from .fold_commands import *
 from .presentation_commands import *
 from .tools_commands import *
-from .common import find_freeplane_window, type_text
+from .common import find_freeplane_window, type_text, DEFAULT_DELAY
 
 # Version of the commands package
 __version__ = '0.1.0'

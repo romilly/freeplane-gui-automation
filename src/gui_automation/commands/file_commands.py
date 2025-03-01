@@ -5,7 +5,7 @@ File menu commands for Freeplane automation.
 import time
 import logging
 import pyautogui
-from .common import DEFAULT_DELAY, type_text
+from gui_automation.commands.common import DEFAULT_DELAY, type_text
 
 __all__ = [
     'new_map',

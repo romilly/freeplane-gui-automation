@@ -5,7 +5,7 @@ Node creation commands for Freeplane automation.
 import time
 import logging
 import pyautogui
-from .common import DEFAULT_DELAY
+from gui_automation.commands.common import DEFAULT_DELAY
 
 __all__ = [
     'new_child_node',

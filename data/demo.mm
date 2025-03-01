@@ -1,9 +1,9 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="My Project Plan" FOLDED="false" ID="ID_668038783" CREATED="1740742674003" MODIFIED="1740742680231" STYLE="oval">
+<node TEXT="My Project Plan" FOLDED="false" ID="ID_939500786" CREATED="1740827811306" MODIFIED="1740827816584" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle">
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false" show_note_icons="true"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -64,17 +64,45 @@
 </map_styles>
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="3" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="Tasks" POSITION="right" ID="ID_1085685906" CREATED="1740742680829" MODIFIED="1740742682671">
+<node TEXT="Tasks" POSITION="right" ID="ID_1552507598" CREATED="1740827817182" MODIFIED="1740827819187">
 <edge COLOR="#ff0000"/>
-<node TEXT="Research" ID="ID_584629659" CREATED="1740742682769" MODIFIED="1740742685197"/>
-<node TEXT="Development" ID="ID_680386815" CREATED="1740742685290" MODIFIED="1740742688438"/>
-<node TEXT="Testing" ID="ID_612644274" CREATED="1740742688531" MODIFIED="1740742690790"/>
+<node TEXT="Research" ID="ID_1803489253" CREATED="1740827819280" MODIFIED="1740827821974"/>
+<node TEXT="Development" ID="ID_1146088080" CREATED="1740827822067" MODIFIED="1740827825276"/>
+<node TEXT="Testing" ID="ID_1177868981" CREATED="1740827825369" MODIFIED="1740827829063"><richcontent TYPE="DETAILS">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      TDD
+    </p>
+  </body>
+</html>
+
+</richcontent>
 </node>
-<node TEXT="Timeline" POSITION="left" ID="ID_1510423386" CREATED="1740742691484" MODIFIED="1740742694221">
+</node>
+<node TEXT="Timeline" POSITION="left" ID="ID_935804460" CREATED="1740827830463" MODIFIED="1740827836716">
 <edge COLOR="#0000ff"/>
 <font BOLD="true"/>
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Worthy of note!
+    </p>
+  </body>
+</html>
+
+</richcontent>
 </node>
-<node TEXT="Resources" POSITION="right" ID="ID_258394851" CREATED="1740742694927" MODIFIED="1740742700087" LINK="https://www.freeplane.com">
+<node TEXT="Resources" POSITION="right" ID="ID_880743595" CREATED="1740827837820" MODIFIED="1740827841968" LINK="https://www.freeplane.com">
 <edge COLOR="#00ff00"/>
 </node>
 </node>

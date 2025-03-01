@@ -5,11 +5,11 @@ Note-related commands for Freeplane automation.
 import time
 import logging
 import pyautogui
-from .common import DEFAULT_DELAY
+from gui_automation.commands.common import DEFAULT_DELAY, type_text
 
 __all__ = [
     'display_note_panel',
-    'note_edit_switch'
+    'edit_note'
 ]
 
 def display_note_panel():
@@ -18,8 +18,14 @@ def display_note_panel():
     pyautogui.hotkey('ctrl', '>')
     time.sleep(DEFAULT_DELAY)
 
-def note_edit_switch():
+def _note_edit_switch():
     """Note Edit Switch (Ctrl+Less)"""
     logging.info("Switching note edit mode")
     pyautogui.hotkey('ctrl', '<')
     time.sleep(DEFAULT_DELAY)
+
+def edit_note(text: str) -> None:
+    _note_edit_switch()
+    type_text(text)
+    _note_edit_switch()
+
